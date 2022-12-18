@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="checkoutPage" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.CheckoutController">
+   <children>
+      <ListView fx:id="cartLst" layoutX="14.0" layoutY="14.0" prefHeight="264.0" prefWidth="286.0" />
+      <Label fx:id="totalPriceLbl" alignment="CENTER_RIGHT" layoutX="14.0" layoutY="285.0" prefHeight="28.0" prefWidth="286.0" text="Total: " />
+      <ComboBox fx:id="paymentComboBox" layoutX="354.0" layoutY="14.0" onAction="#paymentChanged" prefHeight="25.0" prefWidth="232.0" promptText="Choose payment method" />
+      <TextField fx:id="cardNumberField" layoutX="354.0" layoutY="63.0" prefHeight="25.0" prefWidth="232.0" promptText="card number" visible="false" />
+      <TextField fx:id="dateField" layoutX="354.0" layoutY="107.0" prefHeight="25.0" prefWidth="98.0" promptText="date" visible="false" />
+      <TextField fx:id="cvvField" layoutX="527.0" layoutY="107.0" prefHeight="25.0" prefWidth="59.0" promptText="cvv" visible="false" />
+      <TextField fx:id="emailField" layoutX="354.0" layoutY="63.0" prefHeight="25.0" prefWidth="232.0" promptText="email" visible="false" />
+      <TextField fx:id="passwordField" layoutX="354.0" layoutY="107.0" prefHeight="25.0" prefWidth="232.0" promptText="password" visible="false" />
+      <Button fx:id="payBtn" layoutX="354.0" layoutY="188.0" mnemonicParsing="false" onAction="#payBtnClicked" prefHeight="37.0" prefWidth="232.0" text="Pay" visible="false" />
+      <Label fx:id="emptyLbl" layoutX="354.0" layoutY="146.0" prefHeight="25.0" prefWidth="232.0" text="Some fields are empty" textFill="RED" underline="true" visible="false">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
